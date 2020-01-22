@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import './Components/MemberForm';
+import './Components/Member'
+import MemberForm from './Components/MemberForm';
+import Member from './Components/Member';
+
 
 function App() {
+  const [members, setMembers] = useState({
+    name: "Anthony Hernandez",
+    email: "amhwaa@gmail.com",
+    role: "Full-Stack Web Dev"
+
+});
+console.log(members);
+  const addMembers = member => {
+    const newMember = setMembers([...members, member]);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>New Member</h1>
+      <MemberForm addMember={addMembers} />
+      <h1>Current Members</h1>
+      <Member member={members} />
+
     </div>
   );
 }
