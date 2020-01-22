@@ -4,6 +4,7 @@ import './Components/MemberForm';
 import './Components/Member'
 import MemberForm from './Components/MemberForm';
 import Member from './Components/Member';
+import { ReactDOM } from 'react-dom';
 
 
 function App() {
@@ -14,19 +15,20 @@ function App() {
 
 });
 console.log(members);
-  const addMembers = member => {
+
+  const addNewMember = member => {
     const newMember = setMembers([...members, member]);
   }
 
   return (
     <div className="App">
       <h1>New Member</h1>
-      <MemberForm addMember={addMembers} />
+      <MemberForm addNewMember={addNewMember} />
       <h1>Current Members</h1>
-      <Member member={members} />
+      <Member members={members} />
 
     </div>
   );
 }
-
 export default App;
+

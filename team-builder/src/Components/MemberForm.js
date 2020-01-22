@@ -24,7 +24,7 @@ const MemberForm = props => {
     return (
     <div>
       <form onSubmit={submitHandler}>
-        <h1>{member.name}</h1>
+        <h1>{member.name} </h1>
         <label htmlFor="name">Name</label>
         <input
           onChange={handleChanges}
@@ -34,7 +34,7 @@ const MemberForm = props => {
           value={member.name}
         />
 
-        <label htmlFor="email">Email Address</label>
+        <label htmlFor="email">Email Address </label>
         <textarea
           onChange={handleChanges}
           id="email"
@@ -43,7 +43,7 @@ const MemberForm = props => {
           value={member.email}
         />
 
-        <label htmlFor="role">Role</label>
+        <label htmlFor="role">Role </label>
         <textarea
           onChange={handleChanges}
           id="role"
