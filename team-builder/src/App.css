@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.body{
+  display: flex;
   align-items: center;
+  text-align: center;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: black;
+  color: pink;
 }
+*{
+  background-color: black;
+  color: pink;
 
-.App-link {
-  color: #61dafb;
 }
+h1, h2, h3 {
+  font-family: 'Kaushan Script', cursive;
+}
+label {
+  padding: 2%;
+}
+input, select {
+  margin: 2%;
+  padding: 2%;
+  border: 0.5px solid darkgray;
+  border-radius: 5px;
+  box-shadow: 2px 2px;
+  text-decoration: none;
+  outline: none;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+button {
+  margin: 4%;
+  padding: 1%;
+  border-radius: 5px;
+  border: 0.5px solid darkgray;
+  box-shadow: 2px 2px;
+  text-decoration: none;
+  outline: none;
 }
